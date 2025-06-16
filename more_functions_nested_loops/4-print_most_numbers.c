@@ -1,9 +1,13 @@
 #include "main.h"
 
+/**
+* print_most_numbers - prints most numbers
+* Return: a * b
+*/
+
 void print_most_numbers(void)
 {
 	int i;
-
 
 	for (i = 0; i <= 9; i++)
 	{
