@@ -8,3 +8,5 @@ int _putchar(char c);
 void rev_string(char *s);
 void puts2(char *str);
 int _putchar(char c);
+void puts_half(char *str);
+int _putchar(char c);
