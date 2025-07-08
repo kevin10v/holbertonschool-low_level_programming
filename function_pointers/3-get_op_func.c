@@ -2,14 +2,16 @@
 #include <stddef.h>
 
 /**
- * get_op_func - selects correct function to perform operation
- * @s: operator passed as argument
- * Return: pointer to corresponding function, or NULL if not found
- */
+* get_op_func - selects correct function to perform operation
+* @s: operator passed as argument
+* Return: pointer to corresponding function, or NULL if not found
+*/
 int (*get_op_func(char *s))(int, int)
 {
-op_t ops[] = {
+if (s == NULL || s[1] != '\0')
+return (NULL);
 
+op_t ops[] = {
 {"+", op_add},
 {"-", op_sub},
 {"*", op_mul},
