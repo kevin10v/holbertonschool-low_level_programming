@@ -2,15 +2,11 @@
 #include <stddef.h>
 
 /**
-* get_op_func - selects correct function to perform operation
-* @s: operator passed as argument
-* Return: pointer to corresponding function, or NULL if not found
-*/
-int (*get_op_func(char *s))(int, int)
-{
-if (s == NULL || s[1] != '\0')
-return (NULL);
-
+ * get_op_func - selects the correct function to perform operation
+ * @s: operator passed as argument
+ * Return: pointer to the function or NULL
+ */
+int (*get_op_func(char *s))(int, int) {
 op_t ops[] = {
 {"+", op_add},
 {"-", op_sub},
@@ -20,6 +16,9 @@ op_t ops[] = {
 {NULL, NULL}
 };
 int i = 0;
+
+if (s == NULL || s[1] != '\0')
+return (NULL);
 
 while (ops[i].op != NULL && *(ops[i].op) != *s)
 i++;

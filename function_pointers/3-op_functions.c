@@ -34,7 +34,7 @@ return (a * b);
 }
 
 /**
- * op_div - returns result of division of a by b
+ * op_div - returns division of a by b
  * @a: first int
  * @b: second int
  * Return: quotient
